@@ -6,7 +6,7 @@
  * Time: 12:37 AM
  */
 
-class bicycle
+class Bicycle
 {
 public $brand;
 public $model;
@@ -23,7 +23,7 @@ protected $condition_id;
 const CATEGORIES = ['Road', 'Mountain', 'Hybrid', 'Crusier', 'City', 'BMX'];
 const GENDERS = ['Mens', 'Womens', 'Unisex'];
 
-protected const CONDITION_OPTIONS = [
+ const CONDITION_OPTIONS = [
     1 => 'Beat up',
     2 => 'Decent',
     3 => 'Good',
@@ -55,7 +55,7 @@ public function set_weight_kg($value) {
 
 public function weight_lbs(){
     $weight_lbs = floatval($this->weight_kg) * 2.2046226218;
-    return number_format($weight_lbs, 2). 'kg';
+    return number_format($weight_lbs, 2). 'lbs';
 }
 
 public function set_weight_lbs($value) {
